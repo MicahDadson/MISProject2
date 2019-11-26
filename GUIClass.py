@@ -100,7 +100,7 @@ class MyGUIOne:
         
 
         self.root.mainloop()
-        #what
+        #what is goin go
 
 MyGUIOne()
 #

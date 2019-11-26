@@ -97,7 +97,6 @@ class MyGUIOne:
 
         self.button.place (anchor = 's', rely = 1, relx = .5)
 
-##
         
 
         self.root.mainloop()

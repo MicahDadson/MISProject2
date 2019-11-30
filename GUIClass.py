@@ -50,45 +50,45 @@ class MyGUIOne:
         self.radioVal = tk.IntVar()
 
         #create first question then place on screen
-        self.firstAnswer = tk.Label(self.middleFrame, text="Do you Prefer this or that?", bg='#e1fbfa')
+        self.firstAnswer = tk.Label(self.middleFrame, text="What is your favorite color?", bg='#e1fbfa')
         self.firstAnswer.place(anchor="w", relx=0, rely=.05, relwidth=.30)
 
         #create answer choices
-        self.firstrb1 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 1)
+        self.firstrb1 = tk.Radiobutton(self.middleFrame, text = "Red", variable = self.radioVal, value = 1)
         self.firstrb1.place(anchor="w", relx=.0, rely=.10, relwidth=.1)
-        self.firstrb2 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 2)
+        self.firstrb2 = tk.Radiobutton(self.middleFrame, text = "Blue", variable = self.radioVal, value = 2)
         self.firstrb2.place(anchor="w", relx=.0, rely=.15, relwidth=.1)
-        self.firstrb3 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 3)
+        self.firstrb3 = tk.Radiobutton(self.middleFrame, text = "Purple", variable = self.radioVal, value = 3)
         self.firstrb3.place(anchor="w", relx=.0, rely=.20, relwidth=.1)
-        self.firstrb4 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 4)
+        self.firstrb4 = tk.Radiobutton(self.middleFrame, text = "Green", variable = self.radioVal, value = 4)
         self.firstrb4.place(anchor="w", relx=.0, rely=.25, relwidth=.1)
 
         #create second question then place on screen
-        self.firstAnswer = tk.Label(self.middleFrame, text="Do you Prefer this or that?", bg='#e1fbfa')
+        self.firstAnswer = tk.Label(self.middleFrame, text="What operating system do you prefer?", bg='#e1fbfa')
         self.firstAnswer.place(anchor="w", relx=0, rely=.35, relwidth=.30)
 
         #create answer choices
-        self.secondrb1 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 1)
+        self.secondrb1 = tk.Radiobutton(self.middleFrame, text = "Mac OS", variable = self.radioVal, value = 1)
         self.secondrb1.place(anchor="w", relx=.0, rely=.40, relwidth=.1)
-        self.secondrb2 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 2)
+        self.secondrb2 = tk.Radiobutton(self.middleFrame, text = "Windows", variable = self.radioVal, value = 2)
         self.secondrb2.place(anchor="w", relx=.0, rely=.45, relwidth=.1)
-        self.secondrb3 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 3)
+        self.secondrb3 = tk.Radiobutton(self.middleFrame, text = "Linux", variable = self.radioVal, value = 3)
         self.secondrb3.place(anchor="w", relx=.0, rely=.50, relwidth=.1)
-        self.secondrb4 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 4)
+        self.secondrb4 = tk.Radiobutton(self.middleFrame, text = "Android", variable = self.radioVal, value = 4)
         self.secondrb4.place(anchor="w", relx=.0, rely=.55, relwidth=.1)
 
         #create second question then place on screen
-        self.thirdAnswer = tk.Label(self.middleFrame, text="Do you Prefer this or that?", bg='#e1fbfa')
+        self.thirdAnswer = tk.Label(self.middleFrame, text="What brand of computer do you use?", bg='#e1fbfa')
         self.thirdAnswer.place(anchor="w", relx=0, rely=.65, relwidth=.30)
 
         #create answer choices
-        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 1)
+        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text = "Asus", variable = self.radioVal, value = 1)
         self.thirdrb1.place(anchor="w", relx=.0, rely=.70, relwidth=.1)
-        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 2)
+        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text = "Dell", variable = self.radioVal, value = 2)
         self.thirdrb2.place(anchor="w", relx=.0, rely=.75, relwidth=.1)
-        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 3)
+        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text = "HP", variable = self.radioVal, value = 3)
         self.thirdrb3.place(anchor="w", relx=.0, rely=.80, relwidth=.1)
-        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text = "this", variable = self.radioVal, value = 4)
+        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text = "Mac", variable = self.radioVal, value = 4)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85, relwidth=.1)
 
         #create submit button
@@ -100,7 +100,15 @@ class MyGUIOne:
         
 
         self.root.mainloop()
-        #what is going on
+
+        #questions to be asked:
+        #what is your favorite color?
+        #What operating system do you prefer?
+        #favorite non alphanumeric character
+        #How do you spend your free time
+        #What brand of computer do you use
+        #Method of approachinga project
+        #Favorite beverage
+
 
 MyGUIOne()
-#

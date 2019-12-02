@@ -94,7 +94,7 @@ class MyGUIOne:
 
         #create submit button
         self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
-                                command=self.calc_language)
+                                command=self.calc_language) # i changes this button just to test but will change back
 
         self.button.place (anchor = 's', rely = 1, relx = .5)
 

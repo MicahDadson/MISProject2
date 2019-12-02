@@ -92,18 +92,31 @@ class MyGUIOne:
         self.thirdrb4 = tk.Radiobutton(self.middleFrame, text = "Mac", variable = self.radioVal, value = 12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85, relwidth=.1)
 
+        #create next page button
+        self.nxt_button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
+                                command=lambda: [self.destoryWindow()])
+        self.nxt_button.pack(side = 'right')
+
+
+
+
+
         #create submit button
-        self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
+        self.button = tk.Button(self.middleFrame, text="Submit", bg='red', fg='gray', font=60,
                                 command=self.calc_language) # i changes this button just to test but will change back
 
         self.button.place (anchor = 's', rely = 1, relx = .5)
-
-
-
-
-        
-
         self.root.mainloop()
+
+
+
+
+
+
+
+
+
+
 
 
     def calc_language(self):
@@ -111,7 +124,7 @@ class MyGUIOne:
         if total > 0 and total <= 20:
             tkinter.messagebox.showinfo('Your language', 'Your programming language is Ruby')
         elif total > 21 and total <= 35:
-            tkinter.messagebox.showinfo('Your Language', 'Your programming language is Python')
+            tkinter.messagebox.showinfo('Your language', 'Your programming language is Python')
 
 
 

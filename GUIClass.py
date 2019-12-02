@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.messagebox
 
 class MyGUIOne:
     def destoryWindow(self):
@@ -68,38 +69,52 @@ class MyGUIOne:
         self.firstAnswer.place(anchor="w", relx=0, rely=.35, relwidth=.30)
 
         #create answer choices
-        self.secondrb1 = tk.Radiobutton(self.middleFrame, text = "Mac OS", variable = self.radioVal, value = 1)
+        self.secondrb1 = tk.Radiobutton(self.middleFrame, text = "Mac OS", variable = self.radioVal, value = 5)
         self.secondrb1.place(anchor="w", relx=.0, rely=.40, relwidth=.1)
-        self.secondrb2 = tk.Radiobutton(self.middleFrame, text = "Windows", variable = self.radioVal, value = 2)
+        self.secondrb2 = tk.Radiobutton(self.middleFrame, text = "Windows", variable = self.radioVal, value = 6)
         self.secondrb2.place(anchor="w", relx=.0, rely=.45, relwidth=.1)
-        self.secondrb3 = tk.Radiobutton(self.middleFrame, text = "Linux", variable = self.radioVal, value = 3)
+        self.secondrb3 = tk.Radiobutton(self.middleFrame, text = "Linux", variable = self.radioVal, value = 7)
         self.secondrb3.place(anchor="w", relx=.0, rely=.50, relwidth=.1)
-        self.secondrb4 = tk.Radiobutton(self.middleFrame, text = "Android", variable = self.radioVal, value = 4)
+        self.secondrb4 = tk.Radiobutton(self.middleFrame, text = "Android", variable = self.radioVal, value = 8)
         self.secondrb4.place(anchor="w", relx=.0, rely=.55, relwidth=.1)
 
-        #create second question then place on screen
+        #create third question then place on screen
         self.thirdAnswer = tk.Label(self.middleFrame, text="What brand of computer do you use?", bg='#e1fbfa')
         self.thirdAnswer.place(anchor="w", relx=0, rely=.65, relwidth=.30)
 
         #create answer choices
-        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text = "Asus", variable = self.radioVal, value = 1)
+        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text = "Asus", variable = self.radioVal, value = 9)
         self.thirdrb1.place(anchor="w", relx=.0, rely=.70, relwidth=.1)
-        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text = "Dell", variable = self.radioVal, value = 2)
+        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text = "Dell", variable = self.radioVal, value = 10)
         self.thirdrb2.place(anchor="w", relx=.0, rely=.75, relwidth=.1)
-        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text = "HP", variable = self.radioVal, value = 3)
+        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text = "HP", variable = self.radioVal, value = 11)
         self.thirdrb3.place(anchor="w", relx=.0, rely=.80, relwidth=.1)
-        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text = "Mac", variable = self.radioVal, value = 4)
+        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text = "Mac", variable = self.radioVal, value = 12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85, relwidth=.1)
 
         #create submit button
         self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
-                                command=lambda: [self.destoryWindow()])
+                                command=self.calc_language)
 
         self.button.place (anchor = 's', rely = 1, relx = .5)
+
+
+
 
         
 
         self.root.mainloop()
+
+
+    def calc_language(self):
+        total = int(self.radioVal.get())
+        if total > 0 and total <= 20:
+            tkinter.messagebox.showinfo('Your language', 'Your programming language is Ruby')
+        elif total > 21 and total <= 35:
+            tkinter.messagebox.showinfo('Your Language', 'Your programming language is Python')
+
+
+
 
         #questions to be asked:
         #what is your favorite color?

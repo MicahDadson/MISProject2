@@ -117,7 +117,7 @@ class MyGUIOne:
         self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Mac", variable=self.radioValQ3, value=12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85)
 
-        # create submit button
+        # create snext page button
         self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
                                 command=lambda: [self.calculateChoice(), self.destoryWindow()])
 
@@ -136,6 +136,11 @@ class MyGUIOne:
 
 
 class MyGUITwo:
+    def destory_Window(self):
+        self.upperFrame.destroy()
+        self.middleFrame.destroy()
+
+
     def __init__(self, prevScore):
         # Each answer choice is associated with a score. Variable score keeps track of the total score
         self.score = prevScore
@@ -199,13 +204,17 @@ class MyGUITwo:
         self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Wine", variable=self.radioValQ3, value=12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85)
 
-        # create submit button
+        # create next page button
+
         self.button = tk.Button(self.middleFrame, text="Submit Quiz", bg='red', fg='gray', font=60,
                                 command=lambda: [self.showScore()])
+        self.button.pack(side = 'bottom')
 
-        self.button.place(anchor='s', rely=1, relx=.5)
+        self.root.mainloop
 
-        self.root.mainloop()
+
+
+
 
 
 MyGUIOne()

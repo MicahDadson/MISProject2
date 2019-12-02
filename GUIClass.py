@@ -241,46 +241,50 @@ class MyGUIThree:
         self.radioValQ3 = tk.IntVar()
 
         # create first question then place on screen
-        self.firstAnswer = tk.Label(self.middleFrame, text="How do you spend?", bg='#e1fbfa')
+        self.firstAnswer = tk.Label(self.middleFrame, text="What is your classification?", bg='#e1fbfa')
         self.firstAnswer.place(anchor="w", relx=0, rely=.05)
 
         # create answer choices
-        self.firstrb1 = tk.Radiobutton(self.middleFrame, text="Watching TV", variable=self.radioValQ1, value=1)
+        self.firstrb1 = tk.Radiobutton(self.middleFrame, text="Freshman", variable=self.radioValQ1, value=1)
         self.firstrb1.place(anchor="w", relx=.0, rely=.10)
-        self.firstrb2 = tk.Radiobutton(self.middleFrame, text="Playing video games", variable=self.radioValQ1, value=2)
+        self.firstrb2 = tk.Radiobutton(self.middleFrame, text="Sophomore", variable=self.radioValQ1, value=2)
         self.firstrb2.place(anchor="w", relx=.0, rely=.15)
-        self.firstrb3 = tk.Radiobutton(self.middleFrame, text="Studying/Homework", variable=self.radioValQ1, value=3)
+        self.firstrb3 = tk.Radiobutton(self.middleFrame, text="Junior", variable=self.radioValQ1, value=3)
         self.firstrb3.place(anchor="w", relx=.0, rely=.20)
-        self.firstrb4 = tk.Radiobutton(self.middleFrame, text="Spending time with friends", variable=self.radioValQ1, value=4)
+        self.firstrb4 = tk.Radiobutton(self.middleFrame, text="Senior", variable=self.radioValQ1, value=4)
         self.firstrb4.place(anchor="w", relx=.0, rely=.25)
 
         # create second question then place on screen
-        self.firstAnswer = tk.Label(self.middleFrame, text="What is your favorite alphanumeric character?", bg='#e1fbfa')
+        self.firstAnswer = tk.Label(self.middleFrame, text="What is your preferred streaming service?", bg='#e1fbfa')
         self.firstAnswer.place(anchor="w", relx=0, rely=.35)
 
         # create answer choices
-        self.secondrb1 = tk.Radiobutton(self.middleFrame, text="<", variable=self.radioValQ2, value=5)
+        self.secondrb1 = tk.Radiobutton(self.middleFrame, text="Hulu", variable=self.radioValQ2, value=5)
         self.secondrb1.place(anchor="w", relx=.0, rely=.40)
-        self.secondrb2 = tk.Radiobutton(self.middleFrame, text=">", variable=self.radioValQ2, value=6)
+        self.secondrb2 = tk.Radiobutton(self.middleFrame, text="Netflix", variable=self.radioValQ2, value=6)
         self.secondrb2.place(anchor="w", relx=.0, rely=.45)
-        self.secondrb3 = tk.Radiobutton(self.middleFrame, text="#", variable=self.radioValQ2, value=7)
+        self.secondrb3 = tk.Radiobutton(self.middleFrame, text="Disney Plus", variable=self.radioValQ2, value=7)
         self.secondrb3.place(anchor="w", relx=.0, rely=.50)
-        self.secondrb4 = tk.Radiobutton(self.middleFrame, text="&", variable=self.radioValQ2, value=8)
+        self.secondrb4 = tk.Radiobutton(self.middleFrame, text="Pirating", variable=self.radioValQ2, value=8)
         self.secondrb4.place(anchor="w", relx=.0, rely=.55)
 
         # create second question then place on screen
-        self.thirdAnswer = tk.Label(self.middleFrame, text="What is your favorite drink?", bg='#e1fbfa')
+        self.thirdAnswer = tk.Label(self.middleFrame, text="How do you take on projects?", bg='#e1fbfa')
         self.thirdAnswer.place(anchor="w", relx=0, rely=.65)
 
         # create answer choices
-        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text="Water", variable=self.radioValQ3, value=9)
+        self.thirdrb1 = tk.Radiobutton(self.middleFrame, text="Plan", variable=self.radioValQ3, value=9)
         self.thirdrb1.place(anchor="w", relx=.0, rely=.70)
-        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text="Soda", variable=self.radioValQ3, value=10)
+        self.thirdrb2 = tk.Radiobutton(self.middleFrame, text="Wait till last minute", variable=self.radioValQ3, value=10)
         self.thirdrb2.place(anchor="w", relx=.0, rely=.75)
-        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text="Beer", variable=self.radioValQ3, value=11)
+        self.thirdrb3 = tk.Radiobutton(self.middleFrame, text="Make it up as I go", variable=self.radioValQ3, value=11)
         self.thirdrb3.place(anchor="w", relx=.0, rely=.80)
-        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Wine", variable=self.radioValQ3, value=12)
+        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Wait till the last minute", variable=self.radioValQ3, value=12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85)
+
+        self.button = tk.Button(self.middleFrame, text="Submit Quiz", bg='red', fg='gray', font=60,
+                                command=lambda: [self.showScore()])
+        self.button.place(anchor='s', rely=1, relx=.5)
 
 
 

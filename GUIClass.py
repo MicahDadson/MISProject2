@@ -1,14 +1,28 @@
+# Name: Micah Dadson and Jerry Gutierrez
+# Class: MIS 4V96
+# Assignment Title: Project 2
+# Due Date: December 3, 2019
+# Description: This program allows the user to take a BuzzFeed like quiz
+# To determine which programming language they are
+
 import tkinter as tk
 import tkinter.messagebox
 
 
 class MyGUIOne:
     # destorys the frames of the first page so the frames for the second page can be created
-    def destoryWindow(self):
+    def destoryFirstWindow(self):
         self.upperFrame.destroy()
         self.middleFrame.destroy()
         # open next window by initializing MyGUITwo and pass in the score
         MyGUITwo.__init__(self, self.score)
+
+    # destorys the frames of the first page so the frames for the second page can be created
+    def destorySecondWindow(self):
+        self.upperFrame.destroy()
+        self.middleFrame.destroy()
+        # open next window by initializing MyGUITwo and pass in the score
+        MyGUIThree.__init__(self, self.score)
 
     # calculates the total score based on the answer choices the user selects
     def calculateChoice(self):
@@ -22,13 +36,23 @@ class MyGUIOne:
 
         message = " "
 
-        if self.score < 30:
+        if self.score < 8:
+            message = "HTML"
+        elif self.score < 16:
+            message = "C"
+        elif self.score < 24:
+            message = "Javascript"
+        elif self.score < 32:
+            message = "Assembly Language"
+        elif self.score < 40:
+            message = "Swift"
+        elif self.score < 48:
             message = "Python"
-        elif self.score < 36:
+        elif self.score < 56:
             message = "Ruby"
-        elif self.score < 42:
+        elif self.score < 64:
             message = "Java"
-        elif self.score <= 48:
+        elif self.score <= 72:
             message = "C++"
 
         tk.messagebox.showinfo("Your programming language is", message)
@@ -117,9 +141,9 @@ class MyGUIOne:
         self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Mac", variable=self.radioValQ3, value=12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85)
 
-        # create snext page button
+        # create next page button
         self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
-                                command=lambda: [self.calculateChoice(), self.destoryWindow()])
+                                command=lambda: [self.calculateChoice(), self.destoryFirstWindow()])
 
         self.button.place(anchor='s', rely=1, relx=.5)
 
@@ -136,14 +160,6 @@ class MyGUIOne:
 
 
 class MyGUITwo:
-    # destorys the frames of the first page so the frames for the second page can be created
-    def destoryWindow(self):
-        self.upperFrame.destroy()
-        self.middleFrame.destroy()
-        # open next window by initializing MyGUITwo and pass in the score
-        MyGUIThree.__init__(self, self.score)
-
-
     def __init__(self, prevScore):
         # Each answer choice is associated with a score. Variable score keeps track of the total score
         self.score = prevScore
@@ -209,13 +225,11 @@ class MyGUITwo:
 
         # create next page button
         self.button = tk.Button(self.middleFrame, text="Next Page", bg='red', fg='gray', font=60,
-                                command=lambda: [self.calculateChoice(), self.destoryWindow()])
+                                command=lambda: [self.calculateChoice(), self.destorySecondWindow()])
 
         self.button.place(anchor='s', rely=1, relx=.5)
 
-
-
-        self.root.mainloop
+        self.root.mainloop()
 
 
 class MyGUIThree:
@@ -286,7 +300,7 @@ class MyGUIThree:
                                 command=lambda: [self.showScore()])
         self.button.place(anchor='s', rely=1, relx=.5)
 
-
+        self.root.mainloop()
 
 
 

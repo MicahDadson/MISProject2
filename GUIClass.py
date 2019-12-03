@@ -293,7 +293,7 @@ class MyGUIThree:
         self.thirdrb2.place(anchor="w", relx=.0, rely=.75)
         self.thirdrb3 = tk.Radiobutton(self.middleFrame, text="Make it up as I go", variable=self.radioValQ3, value=11)
         self.thirdrb3.place(anchor="w", relx=.0, rely=.80)
-        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Wait till the last minute", variable=self.radioValQ3, value=12)
+        self.thirdrb4 = tk.Radiobutton(self.middleFrame, text="Work on it till its done", variable=self.radioValQ3, value=12)
         self.thirdrb4.place(anchor="w", relx=.0, rely=.85)
 
         self.button = tk.Button(self.middleFrame, text="Submit Quiz", bg='red', fg='gray', font=60,
